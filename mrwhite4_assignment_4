@@ -1,0 +1,14 @@
+#Name and current stats
+student_name = "Maya"
+current_gpa = 3.5
+study_hours = 21
+social_points = 15
+stress_level = 5
+
+#How the name and current stats are being displayed 
+print(f"Welcome {student_name}!")
+print(f"These are your current stats:")
+print(f"Current GPA: {current_gpa}")
+print(f"Current study hours: {study_hours} hours")
+print(f"Current social points: {social_points}")
+print(f"Current stress level: {stress_level}")
