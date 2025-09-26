@@ -1,0 +1,89 @@
+#Name and current stats
+student_name = "Maya"
+current_gpa = 3.5
+study_hours = 21
+social_points = 15
+stress_level = 5
+
+
+#How the name and current stats are being displayed 
+print(f"Welcome {student_name}!")
+print(f"These are your current stats:")
+print(f"Current GPA: {current_gpa}")
+print(f"Current study hours: {study_hours} hours")
+print(f"Current social points: {social_points}")
+print(f"Current stress level: {stress_level}")
+
+#Choosing your course load
+print("Choose your course load:")
+print("A. Light load (12 credits)")
+print("B. Standard load (14 credits)")
+print("C. Heavy load (18 credits)")
+
+choice = input("Make your choice: ")
+
+#The effects of each choice
+if choice == "A":
+    if current_gpa >= 3.0:
+        stress_level = 20
+        social_points = 60
+        print("You chose the lighter load and your doing well!")
+    elif current_gpa < 3.0:
+        stress_level = 50
+        social_points = 80
+        print("Even though you chose the lighter load make sure you still try your best!")
+elif choice == "B":
+    if current_gpa >= 3.0:
+        stress_level = 30
+        social_points = 50
+        print("You chose the regualr load. Good Job and keep up the good work!")
+    elif current_gpa < 3.0:
+        stress_level = 60
+        social_points = 70
+    print("You decided to go with the regular load. Make sure you stay on top of your work. Good luck!")
+elif choice == "C":
+    if current_gpa >= 3.0:
+        stress_level = 60
+        social_points = 30
+        print("You chose a heavy load and your doing Amazing! Don't forget to take the time to de-stress!")
+    elif current_gpa < 3.0:
+        stress_level = 80
+        social_points = 50
+        print("Remember that you chose a heavy load that requires discipline. Don't give up!")
+else:
+    print("That's not an option. Try Again!")
+
+
+#Strategy decison
+class_courses = ["Programming", "Math", "English", "History"]
+
+
+#Choose a class to focus on
+print("Now it's time to study! Choose the course you want to study for.")
+print("Programming")
+print("Math")
+print("English")
+print("History")
+class_choice = input("Choose Your Class: ")
+
+#The result for choosing a course
+
+if (class_choice in class_courses):
+    if (class_choice == "Programming"):
+        current_gpa = 4.0
+        social_points = 40
+        print("Good Choice! Programming is hard.")
+    elif (class_choice == "English"):
+        current_gpa = 3.8
+        social_points = 95
+        print("English is needed for everything you'll ever do so make sure you understand everything.")
+    elif class_choice == "History":
+        current_gpa = 3.5
+        social_points = 80
+        print("History is really important. Make sure you keep up the great work!")
+    elif class_choice == "Math":
+        current_gpa = 3.0
+        social_points = 60
+        print("Math is a difficult class but you can get through it and understand if you stufy properly.")
+elif (class_choice not in class_courses) or (study_hours == 0):
+    print("Error")
