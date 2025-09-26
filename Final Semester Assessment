@@ -1,0 +1,154 @@
+#Name and current stats
+student_name = "Maya White"
+current_gpa = 3.5
+study_hours = 21
+social_points = 15
+stress_level = 5
+
+
+#How the name and current stats are being displayed 
+print(f"Welcome {student_name}!")
+print(f"These are your current stats:")
+print(f"Current GPA: {current_gpa}")
+print(f"Current study hours: {study_hours} hours")
+print(f"Current social points: {social_points}")
+print(f"Current stress level: {stress_level}")
+
+#Choosing your course load
+print("Choose your course load:")
+print("A. Light load (12 credits)")
+print("B. Standard load (14 credits)")
+print("C. Heavy load (18 credits)")
+
+choice = input("Make your choice: ")
+
+#The effects of each choice
+if choice == "A":
+    if current_gpa >= 3.0:
+        stress_level = 20
+        study_hours = 20
+        print("You chose the lighter load and your doing well!")
+    elif current_gpa < 3.0:
+        stress_level = 50
+        study_hours = 10
+        print("Even though you chose the lighter load make sure you still try your best!")
+elif choice == "B":
+    if current_gpa >= 3.0:
+        stress_level = 30
+        study_hours = 30
+        print("You chose the regualr load. Good Job and keep up the good work!")
+    elif current_gpa < 3.0:
+        stress_level = 60
+        study_hours = 19
+    print("You decided to go with the regular load. Make sure you stay on top of your work. Good luck!")
+elif choice == "C":
+    if current_gpa >= 3.0:
+        stress_level = 60
+        study_hours = 40
+        print("You chose a heavy load and your doing Amazing! Don't forget to take the time to de-stress!")
+    elif current_gpa < 3.0:
+        stress_level = 80
+        study_hours = 25
+        print("Remember that you chose a heavy load that requires discipline. Don't give up!")
+else:
+    print("That's not an option. Try Again!")
+
+
+#Strategy decison
+class_courses = ["Programming", "Math", "English", "History"]
+
+
+#Choose a class to focus on
+print("Now it's time to study! Choose the course you want to study for.")
+print("Programming")
+print("Math")
+print("English")
+print("History")
+class_choice = input("Choose Your Class: ")
+
+#The result for choosing a course
+
+if (class_choice in class_courses):
+    if (class_choice == "Programming"):
+        current_gpa = 4.0
+        social_points = 40
+        print("Good Choice! Programming is hard.")
+    elif (class_choice == "English"):
+        current_gpa = 3.8
+        social_points = 95
+        print("English is needed for everything you'll ever do so make sure you understand everything.")
+    elif class_choice == "History":
+        current_gpa = 3.5
+        social_points = 80
+        print("History is really important. Make sure you keep up the great work!")
+    elif class_choice == "Math":
+        current_gpa = 2.0
+        social_points = 20
+        print("Math is a difficult class but you can get through it and understand if you stufy properly.")
+elif (class_choice not in class_courses) or (study_hours == 0):
+    print("Error")
+
+#Final Assessment including everything from the profile
+
+
+print("Here is the final statistics:")
+print(f"Current GPA: {current_gpa}")
+print(f"Current study hours: {study_hours} hours")
+print(f"Current social points: {social_points}")
+print(f"Current stress level: {stress_level}")
+
+#Fun activities to do
+pool = "a"
+roller_rink = "b"
+movie_night = "c"
+potluck_with_friends = "d"
+
+#Activities to do if your failing or want to improve for the next year
+study = "h"
+research = "i"
+
+#Activites to do when you have time for fun or studying
+hangout_friends = "e"
+internship = "f"
+clubs = "g"
+
+if current_gpa >= 3.5:
+    if (stress_level > 50) or (social_points < 50):
+        print("You need a breather. Make a choice on what you would like to do: ")
+        print("a. Pool, b. Roller Rink, c. Movie Night, d. Potluck with friends")
+        option = input("What would you like to do: ")
+        if option is pool:
+            print("Go and have some fun splashing in the pool you deserve it") 
+        elif option is roller_rink:
+            print("Roller skating is so much fun your gona have a blast!")
+        elif option is movie_night:
+            print("A good movie, with your favorite food and maybe some friends is definielty a good and relaxing vibe after putting in all that work for school.")
+        elif option is potluck_with_friends:
+            print("Potluck food with close friends always turns out good. The food is delicious and hanging out with friends is always a good time.")
+        else:
+            print("Hey you should go have fun instead of being boring!")
+elif (current_gpa >= 2.1) and (current_gpa <= 3.4):
+    if (social_points >= 50) or (stress_level <= 50):
+        print("You did a good job at managing your school work. Take some time to reflect and think about what you want to do:")
+        print("e. Hang out with friends")
+        print("f. Do an internship")
+        print("g. get involved with clubs")
+        option = input("What would you like to do?")
+        if option is hangout_friends:
+            print("Go have fun with your Friends!")
+        elif option is internship:
+            print("This is a great way to get some experience under your belt")
+        elif option is clubs:
+            print("Get involved witht the people on campus and gain some connections.")
+elif (current_gpa >= 1.0) and (current_gpa <= 2.0):
+    if (study_hours < 20):
+        print("This semester didn't go too well huh. Pick one of these options so you can do better next semester:")
+        print("g. Study")
+        print("h. Get an academic internship or do a research project")
+        option = input("Make a wise choice: ")
+        if option is study:
+            print("Great choice. I know you can do better next semester!")
+        elif option is research:
+            print("Good job with taking one step forward towards a better semester!")
+        elif option is not study or research:
+            print("Hey! You need to get it together! Go back and make a choice!")
