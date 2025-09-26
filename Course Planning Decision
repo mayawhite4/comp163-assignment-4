@@ -1,0 +1,59 @@
+#Name and current stats
+student_name = "Maya"
+current_gpa = 3.5
+study_hours = 21
+social_points = 15
+stress_level = 5
+
+
+
+
+#How the name and current stats are being displayed
+print(f"Welcome {student_name}!")
+print(f"These are your current stats:")
+print(f"Current GPA: {current_gpa}")
+print(f"Current study hours: {study_hours} hours")
+print(f"Current social points: {social_points}")
+print(f"Current stress level: {stress_level}")
+
+
+#Choosing your course load
+print("Choose your course load:")
+print("A. Light load (12 credits)")
+print("B. Standard load (14 credits)")
+print("C. Heavy load (18 credits)")
+
+
+choice = input("Make your choice: ")
+
+
+#The effects of each choice
+if choice == "A":
+    if current_gpa >= 3.0:
+        stress_level = 20
+        social_points = 60
+        print("You chose the lighter load and your doing well!")
+    elif current_gpa < 3.0:
+        stress_level = 50
+        social_points = 80
+        print("Even though you chose the lighter load make sure you still try your best!")
+elif choice == "B":
+    if current_gpa >= 3.0:
+        stress_level = 30
+        social_points = 50
+        print("You chose the regular load. Good Job and keep up the good work!")
+    elif current_gpa < 3.0:
+        stress_level = 60
+        social_points = 70
+    print("You decided to go with the regular load. Make sure you stay on top of your work. Good luck!")
+elif choice == "C":
+    if current_gpa >= 3.0:
+        stress_level = 60
+        social_points = 30
+        print("You chose a heavy load and your doing Amazing! Don't forget to take the time to de-stress!")
+    elif current_gpa < 3.0:
+        stress_level = 80
+        social_points = 50
+        print("Remember that you chose a heavy load that requires discipline. Don't give up!")
+else:
+    print("That's not an option. Try Again!")
